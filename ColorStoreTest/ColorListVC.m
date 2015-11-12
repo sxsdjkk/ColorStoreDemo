@@ -10,7 +10,8 @@
 #import "ColorEditVC.h"
 #import "JKDataManager.h"
 #import "ColorListCell.h"
-
+#import "UIKit/UIDevice.h"
+#import "JKColor.h"
 
 @interface ColorListVC () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -53,6 +54,12 @@
 - (void)viewWillAppear:(BOOL)animated {
   
   [super viewWillAppear:animated];
+  [_colorListArray sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        
+        JKColor *color1 = (JKColor *)obj1;
+        JKColor *color2 = (JKColor *)obj2;
+        return [color2.lastModifyDate compare:color1.lastModifyDate];
+  }];
   [_tableView reloadData];
 }
 
@@ -98,18 +105,44 @@
   
   if (editingStyle == UITableViewCellEditingStyleDelete) {
     
-    
-    
-    if (_colorStoreType != ColorStoreTypeSqlite) {
-      
-      [self saveArray];
-    }
-    else {
-      
-      [JKDataManager deleteFromDB:[_colorListArray objectAtIndex:indexPath.row]];
-    }
-    [_colorListArray removeObjectAtIndex:indexPath.row];
-    [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+      if ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"] == NSOrderedAscending) {
+          
+          
+          if (_colorStoreType != ColorStoreTypeSqlite) {
+              
+              [self saveArray];
+          }
+          else {
+              
+              [JKDataManager deleteFromDB:[_colorListArray objectAtIndex:indexPath.row]];
+          }
+          [_colorListArray removeObjectAtIndex:indexPath.row];
+          [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+      }
+      else {
+        
+          UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认删除吗？" preferredStyle:UIAlertControllerStyleAlert];
+          
+          [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+              
+              if (_colorStoreType != ColorStoreTypeSqlite) {
+                  
+                  [self saveArray];
+              }
+              else {
+                  
+                  [JKDataManager deleteFromDB:[_colorListArray objectAtIndex:indexPath.row]];
+              }
+              [_colorListArray removeObjectAtIndex:indexPath.row];
+              [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+              
+          }]];
+          
+          [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+          
+        [self presentViewController:alert animated:YES completion:nil];
+      }
   }
 }
 

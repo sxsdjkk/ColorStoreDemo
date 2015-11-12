@@ -15,6 +15,7 @@
 @property (nonatomic, assign) CGFloat rValue;
 @property (nonatomic, assign) CGFloat gValue;
 @property (nonatomic, assign) CGFloat bValue;
+
 @property (nonatomic, retain) NSDate *lastModifyDate;
 
 @property (nonatomic, assign) NSInteger colorID;

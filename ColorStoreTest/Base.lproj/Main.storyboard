@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aWV-Zh-PF4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aWV-Zh-PF4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -20,57 +20,72 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS笔试题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub6-FE-qdz">
                                 <rect key="frame" x="245" y="108" width="110" height="29"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by:靳科科" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS2-qf-IXR">
-                                <rect key="frame" x="475" y="162" width="75" height="21"/>
+                                <rect key="frame" x="475" y="152" width="75" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-Dr-6e6">
                                 <rect key="frame" x="240" y="227" width="120" height="30"/>
+                                <animations/>
                                 <state key="normal" title="对象序列化持久化"/>
                                 <connections>
                                     <action selector="gotoColorListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rf4-r8-kdd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1J-8r-tvs">
-                                <rect key="frame" x="254" y="427" width="92" height="30"/>
+                                <rect key="frame" x="254" y="423" width="92" height="30"/>
+                                <animations/>
                                 <state key="normal" title="sqlite3持久化"/>
                                 <connections>
                                     <action selector="gotoColorListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ya-14-CRe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceY-1a-CgF">
-                                <rect key="frame" x="263" y="329" width="74" height="30"/>
+                                <rect key="frame" x="263" y="325" width="74" height="30"/>
+                                <animations/>
                                 <state key="normal" title="plist持久化"/>
                                 <connections>
                                     <action selector="gotoColorListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTn-aG-KWz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015年11月12日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uK-Kn-W1u">
+                                <rect key="frame" x="428" y="181" width="122" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ub6-FE-qdz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ac-vK-ogf"/>
                             <constraint firstItem="ub6-FE-qdz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="1Bf-vd-Rhn"/>
-                            <constraint firstItem="HS2-qf-IXR" firstAttribute="top" secondItem="ub6-FE-qdz" secondAttribute="bottom" constant="25" id="Bce-mr-dX3"/>
+                            <constraint firstItem="HS2-qf-IXR" firstAttribute="top" secondItem="ub6-FE-qdz" secondAttribute="bottom" constant="15" id="Bce-mr-dX3"/>
                             <constraint firstItem="fVY-Dr-6e6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FRa-8W-dTv"/>
                             <constraint firstItem="ceY-1a-CgF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FWt-GJ-QET"/>
-                            <constraint firstItem="ceY-1a-CgF" firstAttribute="top" secondItem="fVY-Dr-6e6" secondAttribute="bottom" constant="72" id="MtC-2f-xic"/>
+                            <constraint firstItem="ceY-1a-CgF" firstAttribute="top" secondItem="fVY-Dr-6e6" secondAttribute="bottom" constant="68" id="MtC-2f-xic"/>
                             <constraint firstItem="H1J-8r-tvs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SLO-t7-e7I"/>
                             <constraint firstItem="H1J-8r-tvs" firstAttribute="top" secondItem="ceY-1a-CgF" secondAttribute="bottom" constant="68" id="ecs-AI-rKQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HS2-qf-IXR" secondAttribute="trailing" constant="30" id="fJY-CX-uaI"/>
+                            <constraint firstItem="7uK-Kn-W1u" firstAttribute="top" secondItem="HS2-qf-IXR" secondAttribute="bottom" constant="8" id="hWD-l9-Kun"/>
                             <constraint firstItem="fVY-Dr-6e6" firstAttribute="top" secondItem="ub6-FE-qdz" secondAttribute="bottom" constant="90" id="l2p-4J-hA9"/>
+                            <constraint firstItem="7uK-Kn-W1u" firstAttribute="trailing" secondItem="HS2-qf-IXR" secondAttribute="trailing" id="tNh-5b-Hch"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gEQ-AN-0vX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="611" y="444"/>
+            <point key="canvasLocation" x="254" y="326"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PRT-rX-SG5">
@@ -80,6 +95,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yDS-0w-Fcc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -88,7 +104,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIu-Ge-iZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="453"/>
+            <point key="canvasLocation" x="-179" y="444"/>
         </scene>
     </scenes>
 </document>
