@@ -54,6 +54,8 @@
 - (void)viewWillAppear:(BOOL)animated {
   
   [super viewWillAppear:animated];
+  self.navigationController.navigationBarHidden = NO;
+  
   [_colorListArray sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         
         JKColor *color1 = (JKColor *)obj1;

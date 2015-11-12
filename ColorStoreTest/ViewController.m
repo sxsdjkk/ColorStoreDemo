@@ -20,6 +20,12 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  
+  [super viewWillAppear:animated];
+  self.navigationController.navigationBarHidden = YES;
+}
+
 - (IBAction)gotoColorListVC:(id)sender {
   
   UIButton *button = (UIButton *)sender;
