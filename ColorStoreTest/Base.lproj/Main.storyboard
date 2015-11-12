@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aWV-Zh-PF4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS笔试题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub6-FE-qdz">
+                                <rect key="frame" x="245" y="108" width="110" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by:靳科科" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS2-qf-IXR">
+                                <rect key="frame" x="475" y="162" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-Dr-6e6">
+                                <rect key="frame" x="240" y="227" width="120" height="30"/>
+                                <state key="normal" title="对象序列化持久化"/>
+                                <connections>
+                                    <action selector="gotoColorListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rf4-r8-kdd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1J-8r-tvs">
+                                <rect key="frame" x="254" y="427" width="92" height="30"/>
+                                <state key="normal" title="sqlite3持久化"/>
+                                <connections>
+                                    <action selector="gotoColorListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ya-14-CRe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceY-1a-CgF">
+                                <rect key="frame" x="263" y="329" width="74" height="30"/>
+                                <state key="normal" title="plist持久化"/>
+                                <connections>
+                                    <action selector="gotoColorListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTn-aG-KWz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ub6-FE-qdz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ac-vK-ogf"/>
+                            <constraint firstItem="ub6-FE-qdz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="1Bf-vd-Rhn"/>
+                            <constraint firstItem="HS2-qf-IXR" firstAttribute="top" secondItem="ub6-FE-qdz" secondAttribute="bottom" constant="25" id="Bce-mr-dX3"/>
+                            <constraint firstItem="fVY-Dr-6e6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FRa-8W-dTv"/>
+                            <constraint firstItem="ceY-1a-CgF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FWt-GJ-QET"/>
+                            <constraint firstItem="ceY-1a-CgF" firstAttribute="top" secondItem="fVY-Dr-6e6" secondAttribute="bottom" constant="72" id="MtC-2f-xic"/>
+                            <constraint firstItem="H1J-8r-tvs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SLO-t7-e7I"/>
+                            <constraint firstItem="H1J-8r-tvs" firstAttribute="top" secondItem="ceY-1a-CgF" secondAttribute="bottom" constant="68" id="ecs-AI-rKQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HS2-qf-IXR" secondAttribute="trailing" constant="30" id="fJY-CX-uaI"/>
+                            <constraint firstItem="fVY-Dr-6e6" firstAttribute="top" secondItem="ub6-FE-qdz" secondAttribute="bottom" constant="90" id="l2p-4J-hA9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gEQ-AN-0vX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="444"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PRT-rX-SG5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWV-Zh-PF4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yDS-0w-Fcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VSm-tm-bO0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIu-Ge-iZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="453"/>
+        </scene>
+    </scenes>
+</document>
